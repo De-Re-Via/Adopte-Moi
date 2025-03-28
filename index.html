@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html  lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Titre de la page (important pour le SEO) checker les liste sur https://www.w3schools.com/tags/tag_meta.asp-->
+        <title>ADOPTE MOI</title>
+        <!-- META Description (SEO - Google affiche ce texte dans les résultats de recherche) -->
+        <meta name="description" content="Repertoire d'animaux à adopter à la Réunion, 97400">
+        <!-- Auteur du site -->
+        <meta name="author" content="DeReVia Studio">
+        <!-- Ajout de l'icône du site (Favicon) petite icône affichée dans l’onglet du navigateur, à côté du titre.  -->
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+        <!--META OG: Open Graph (OG) pour l'affichage sur les réseaux sociaux check https://ogp.me/ -->
+        <meta property="og:title" content="ADOPTE MOI">
+        <meta property="og:description" content="Repertoire d'animaux à adopter à la Réunion, 97400">
+        <meta property="og:image" content="https://adoptemoi.com/assets/preview.png">
+        <meta property="og:url" content="https://adoptemoi.com">
+        <meta property="og:type" content="website">
+        <!-- Twitter Card (optimisation pour Twitter) check https://developer.x.com/en/docs/x-for-websites/cards/overview/summary -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="ADOPTE MOI">
+        <meta name="twitter:description" content="Repertoire d'animaux à adopter à la Réunion, 97400">
+        <meta name="twitter:image" content="https://adoptemoi.com/assets/preview.png">
+        <!-- Lien vers la feuille de style CSS -->
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+        <!-- Import des polices Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <!-- Import des icônes FontAwesome -->
+        <script src="https://kit.fontawesome.com/2703c53b32.js" crossorigin="anonymous"></script>
+        <!-- Import bootstrap et biblio icones -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    </head>
+
+
+    <body>
+        <div class="container-custom">
+            <header>
+              <nav class="custom-navbar">
+                <div class="nav-left">
+                  <img src="/assets/reulogo.png" alt="logo réunion" id="logo-Re">
+                  <span class="brand-title">ADOPTE MOI</span> 
+                </div>
+              
+                <div class="nav-center">
+                  <a href="/pages/animaux.html"><img src="/assets/logo.png" alt="logo derevia" class="logo"></a>
+                </div>
+              
+                <div class="nav-right">
+                  <a href="/pages/animaux.html">REPERTOIRE</a>
+                  <a href="/pages/actu.html" id="ic-actu">ACTU</a>
+
+                  <!-- PANNEAU ACTU :  -->
+                  <div class="actualites-panel">
+                    <div class="actu">
+                      <h2>ACTU</h2>
+
+                      <section class="section-actuPanel">
+                        <h4 class="axe"><strong>LE 14.04.2025</strong></h4>
+                        <p class="axe"><strong>🎉 “Adoptez-moi en fête” – Grand village de l’adoption à Saint-Denis</strong></p>
+                        <p>Rendez-vous le dimanche 14 avril au Parc de la Trinité à Saint-Denis pour une journée festive autour de l’adoption ! Animations, stands associatifs, foodtrucks et surtout… plein d’animaux à rencontrer 🐕🐈
+                        </p>  
+                      </section>
+
+                      <section class="section-actuPanel">
+                        <h4 class="axe"><strong>MARS 2025</strong></h4>
+                        <p class="axe"><strong>🐱 Opération “Adoptez, c’est le moment” : frais réduits jusqu’à fin mars</strong></p>
+                        <p>Plusieurs refuges de l’île s’unissent pour faciliter l’adoption en réduisant les frais (stérilisation, puce, vaccins). Une belle occasion de craquer pour un compagnon de vie. Profitez-en jusqu’au 31 mars !</p>  
+                      </section>
+
+                      <p>Mise à jour le 26.03.2025</p>
+                    </div>
+                  </div>
+
+                  <a href="/pages/projet.html">PROJET</a>
+
+                  
+                </div>
+              </nav>
+            </header>
+
+            
+            <main>
+              <div id="cookieContainer" style="height: 40px;">
+                <span id="cookieBadge" class="badge rounded-pill text-bg-warning">🍪Zéro cookie🍪</span>
+              </div>
+              
+              
+              <h1 class="axe">Ils n'attendent que vous!</h1>
+
+              <section>
+                <div class="axe"><p>🐾 clic sur la photo pour voir son profil ! 🐾</p></div>
+                <div class="gallery-grid grid-visible">
+                  <!-- INSERTION DES PROFILS ANIMAUX ICI -->
+
+                    <!-- CARTE + MODAL PROFILS (REX) -->
+                    <div class="animal-card" data-bs-toggle="modal" data-bs-target="#modalRex">
+                      <img src="/assets/3.jpg" alt="Rex" class="animal-thumbnail">
+                      <p class="animal-name axe">REX</p>
+                    </div>
+                    <div class="modal fade" id="modalRex" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">REX</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="/assets/3.jpg" alt="image animal" class="img-fluid mb-3">
+                            <p><strong>Âge :</strong> 1 ans</p>
+                            <p><strong>Lieu :</strong> Saint-Denis</p>
+                            <p><strong>Association :</strong> SPA974</p>
+                            <p><strong>Contact :</strong> 0612345678</p>
+                            <p>Joueur et câlin.</p>
+                            <img src="/assets/3.jpg" alt="image animal" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- CARTE + MODAL PROFILS (NALA) -->
+                    <div class="animal-card" data-bs-toggle="modal" data-bs-target="#modalNala">
+                      <img src="/assets/4.jpg" alt="Nala" class="animal-thumbnail">
+                      <p class="animal-name axe">NALA</p>
+                    </div>
+                    <div class="modal fade" id="modalNala" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">NALA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="/assets/4.jpg" alt="image animal" class="img-fluid mb-3">
+                            <p><strong>Âge :</strong> 1 ans</p>
+                            <p><strong>Lieu :</strong> Saint-Denis</p>
+                            <p><strong>Association :</strong> SPA974</p>
+                            <p><strong>Contact :</strong> 0612345678</p>
+                            <p>Joueuse et câline.</p>
+                            <img src="/assets/4.jpg" alt="image animal" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- CARTE + MODAL PROFILS (ZOUZOU) -->
+                    <div class="animal-card" data-bs-toggle="modal" data-bs-target="#modalZouzou">
+                      <img src="/assets/7.jpg" alt="Zouzou" class="animal-thumbnail">
+                      <p class="animal-name axe">ZOUZOU</p>
+                    </div>
+                    <div class="modal fade" id="modalZouzou" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">ZOUZOU</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="/assets/7.jpg" alt="image animal" class="img-fluid mb-3">
+                            <p><strong>Âge :</strong> 1 ans</p>
+                            <p><strong>Lieu :</strong> Saint-Denis</p>
+                            <p><strong>Association :</strong> SPA974</p>
+                            <p><strong>Contact :</strong> 0612345678</p>
+                            <p>Joueuse et câline et INCROYABLE.</p>
+                            <img src="/assets/7.jpg" alt="image animal" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- CARTE + MODAL PROFILS (PEARL) -->
+                    <div class="animal-card" data-bs-toggle="modal" data-bs-target="#modalPearl">
+                      <img src="/assets/9.jpg" alt="Pearl" class="animal-thumbnail">
+                      <p class="animal-name axe">PEARL</p>
+                    </div>
+                    <div class="modal fade" id="modalPearl" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">PEARL</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="/assets/9.jpg" alt="image animal" class="img-fluid mb-3">
+                            <p><strong>Âge :</strong> 1 ans</p>
+                            <p><strong>Lieu :</strong> Saint-Denis</p>
+                            <p><strong>Association :</strong> SPA974</p>
+                            <p><strong>Contact :</strong> 0612345678</p>
+                            <p>Joueuse et câline et INCROYABLE POUPOUNE.</p>
+                            <img src="/assets/9.jpg" alt="image animal" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="axe">
+                  <br><a href="/pages/animaux.html" class="a i">
+                    <i class="bi bi-plus-square-dotted"></i>
+                  </a>
+                </div>
+                <p class="axe">En voir plus ?</p>
+              
+              
+              </section>
+
+
+              <br><h2 class="axe">Ils ont été adoptés!</h2>
+              <section class="section-actu"> 
+                <div class="axe"><p>🐶 Retrouvez nos compagnons qui ont trouver une famille! 🐱</p></div>
+                <!-- CAROUSEL BOOTSTRAP -->
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <img src="/assets/1.jpg" class="d-block w-100 carousel-img" alt="chat noir angora">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textBlanc">CUISTO</h5>
+                        <p class="textBlanc">"merci SPA Saint-Denis, Cuisto est heureux avec nous !"</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <img src="/assets/6.jpg" class="d-block w-100 carousel-img" alt="chat noir angora">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textBlanc">CUISTO</h5>
+                        <p class="textBlanc">"merci SPA Saint-Denis, Cuisto mange bien !"</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/assets/7.jpg" class="d-block w-100 carousel-img" alt="chat noir angora">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textBlanc">HASH</h5>
+                        <p class="textBlanc">"merci SPA Saint-Denis, Hash est heureux avec nous !"</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </section>
+
+
+              
+              <br><h2 class="axe">Notre Projet:</h2>
+              <section class="section-a">
+                <p><strong>ADOPTE MOI</strong> est un site simple et gratuit qui centralise toutes les annonces d’adoption de chiens et chats sans foyer à La Réunion. Il réunit les publications des associations, refuges et groupes Facebook pour faciliter l’adoption responsable et donner une seconde chance à nos compagnons à quatre pattes ...</p>
+                <a href="/pages/projet.html" class="a axe i">
+                  <i class="bi bi-plus-square-dotted"></i>
+                </a>
+                <p class="axe">En voir plus ?</p>
+              </section>
+              
+                
+
+              <section class="section-a">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                  <!-- Nous soutenir -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        <h4><strong>💖  NOUS SOUTENIR ? 💻</strong></h4>
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <p><strong class="axe">Un petit don peut faire une grande différence.</strong></p> 
+                          <p><strong>ADOPTE MOI</strong> est un projet entièrement gratuit pour les associations.
+                          Vos dons servent à deux choses :</p>
+                          <p>💖 Soutenir directement les refuges partenaires, pour nourrir, soigner et loger les animaux.</p>
+                          <p>💻 Maintenir le site à jour (hébergement, mises à jour, évolutions) et soutenir le travail du développeur indépendant qui consacre bénévolement du temps à ce projet.</p>
+                          <p>En aidant, vous participez activement à sauver des vies animales et à rendre ce site durable, accessible à tous, et toujours amélioré</p>
+                          <a href="/pages/don.html" class="a axe i1">
+                            &gt;&gt;<i class="bi bi-piggy-bank "></i>&lt;&lt;
+                          </a> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ASSO -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        <h4><strong>🐦 ILS NOUS FONT CONFIANCE 🦜</strong></h4> 
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Espoir Réunion</li>
+                          <li>S.P.A Réunion</li>
+                          <li>Fondation Le Refuge - Délégation de la Réunion</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </section>
+
+            </main>
+            
+
+            <footer>
+              <div class="footer-icons">
+                <a href="https://www.instagram.com/espoirreunion/?hl=en" class="a" target="_blank" rel="noopener noreferrer"> 
+                  <i class="bi bi-instagram i"></i>
+                </a>                
+                <a href="/pages/mentionslegale.html" class="a">
+                  <i class="bi bi-journal-check i"></i>
+                </a>
+                <a href="/pages/contact.html" class="a">
+                  <i class="bi bi-chat-dots i"></i>
+                </a>
+              </div>
+              <p class="dongle-light">© 2025 ADOPTE MOI Website  création: <a href="https://derevia.netlify.app/" class="a-text">DeReVia Studio</a></p>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- JS POUR LE LOGO COOKIE -->
+        <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            const badge = document.getElementById('cookieBadge');
+            // Fade out après 4s
+            setTimeout(() => {
+              badge.style.transition = "opacity 2s ease";
+              badge.style.opacity = 0;
+            }, 4000);
+          });
+        </script>
+        
+        
+    
+      </body>
+</html>
+

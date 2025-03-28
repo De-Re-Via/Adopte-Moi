@@ -1,0 +1,563 @@
+/* BLOC BASE -----------------------------------------------------------------------------*/
+
+/* Réinitialisation des marges/paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* définition du body sur toute la page */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* définition du body en colonne, plus adapté aux mobiles */
+    
+    /* définition d'une police a tous mes textes */
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+/* definition des police */
+
+.dongle-light {
+    font-family: "Dongle", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+.dongle-regular {
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.dongle-bold {
+    font-family: "Dongle", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+
+
+/* définition d'un design responsive au traver d'un grille contenue dans 
+le container de la structure princpale: */  
+
+/* Structure principale du container: Eviter le conflit de la classe container BOOTSTRAP, creation d'un CUSTOM */
+.container-custom {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Grille pour design responsive : */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes dynamiques */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Éléments de la grille : */
+.grid-item {
+    /*background: rgba(255, 255, 255, 0.982);*/
+    padding: 10px;
+    border-radius: 10px;
+    /*box-shadow: 2px 2px 10px rgba(0,0,0,0.1);*/
+    text-align: center;
+}
+
+/* Images de la grille : */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Sur tablette : 2 images par ligne */
+@media screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Sur mobile : 1 seule image par ligne et centrée */
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 colonne uniquement */
+    }
+}
+
+
+/* ARRIERE PLAN BODY -----------------------------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0; /* important pour que le fond passe derrière */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/bck07.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* effet parallax */
+  filter: blur(0px);
+  z-index: -1; /* passe derrière tout le reste */
+  pointer-events: none; /* pour ne pas bloquer les clics */
+  
+}
+
+
+@media screen and (max-width: 700px) {
+  body::before {
+    background-size: cover; /* ou 120%, à ajuster selon effet */
+    background-position: bottom; /* utile si l’image a un sujet en haut */
+  }
+}
+
+
+/* GENERAL -----------------------------------------------------------------------------*/
+
+/* Definition des Header et footer */
+header, footer {
+    background: #a4c3b2;
+    color: #f6fff8;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Icônes du footer disposé les uns à côté des autres */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Icônes du COOKIE */
+#cookieBadge {
+  transform: rotate(5deg);
+  display: inline-block; /* Nécessaire pour que la rotation fonctionne bien */
+}
+
+
+/* Lien - hover  */
+
+.a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.a:hover {
+    color: #f6fff8;
+}
+
+.a-text{
+  color: rgb(255, 255, 255);
+  text-decoration: none; 
+  padding: 10px;
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.a-text:hover {
+  color: #000000;
+}
+
+/* taille icones */
+.i{
+    font-size: 25px; /* Ajuste la taille des icônes */
+}
+
+.i1{
+  font-size: 50px; /* Ajuste la taille des icônes */
+}
+
+/* Sections principale */
+main {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.textBlanc{
+  border: #000000;
+  color: #f6fff8;
+}
+
+/* section principale: animaux*/
+section{
+    margin: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #cfdbd5;
+    text-align: justify;
+    width: 100%;
+    max-width: 1080px;
+}
+
+/* variantes de sections a: panneaux projets*/
+.section-a{
+  background-color: #efe3e1ec;
+}
+
+/* section panneau contact*/
+.section-c{
+  background-color: #a4c3b2;
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+/* section panneau mentions légales*/
+.section-ml{
+  background-color: #a4c3b2;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+
+/* section panneau page actualité*/
+.section-actu{
+  background-color: #efe3e1ec;
+  color: #23302B;
+  margin: 10px;
+  padding: 20px;
+}
+
+/* section panneau pop up actualité*/
+.section-actuPanel{
+  background-color: #ff8d8b;
+  color: #23302B;
+}
+
+/* bouton perso */
+
+ .btn-custom {
+    background-color: #cce3de;
+    color: #23302B;
+    padding: 1px 5px;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 0px solid #a4c3b2;
+    font-family: "Dongle", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .btn-custom:hover {
+    background-color: #a4c3b2;
+    color: #23302B;
+  }
+  
+  .btn-customIcone {
+    background-color: #ffffff00;
+    color: #23302B;
+    padding: 1px 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 0px solid #ffffff00;
+  }
+/* MISE EN PAGE */
+
+.axe {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 5px;        /* Espacement avec le texte */
+  }
+
+h4{
+    font-family: "Dongle", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3{
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* MA NAVBAR */
+
+.custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 20px;
+    color: rgb(0, 0, 0);
+    position: relative;
+  }
+  
+  /* Zones gauche / centre / droite */
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Aligner le titre à gauche */
+  .nav-left {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .brand-title {
+    font-size: 60px;
+    font-family: "Dongle", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+  
+  /* Centrage absolu du logo */
+  .nav-center {
+    justify-content: center;
+  }
+  
+#logo-Re {
+  width: 40px;  /* Ajuste la taille */
+  height: 40px; /* Ajuste la taille */
+  border-radius: 50%; /* Rend l'image circulaire */
+}
+
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .logo:hover{
+    color: #f6fff8;
+  }
+
+  /* Boutons à droite */
+  .nav-right {
+    justify-content: flex-end;
+    gap: 20px;
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+  }
+  
+  .nav-right a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav-right a:hover {
+    color: #f6fff8;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 610px) {
+    .custom-navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-left,
+    .nav-center,
+    .nav-right {
+      justify-content: center;
+      margin: 10px 0;
+    }
+  
+    .nav-right {
+      flex-wrap: wrap;
+    }
+  }
+  
+
+
+  /* MA GALERIE
+ 
+  .gallery-section {
+    padding: 30px;
+    background-color: #eef9f3;
+    border-radius: 20px;
+    margin: 20px;
+  } */
+  
+  .gallery-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Par défaut : 4 colonnes (desktop) */
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Tablette : 3 colonnes */
+  @media screen and (max-width: 1024px) {
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Mobile : 2 colonnes */
+  @media screen and (max-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+
+/* PANNEAU ACUTALITE:
+Fonction survol::
+https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+
+Fonction déplacement de la position du panneau:
+https://developer.mozilla.org/en-US/docs/Web/CSS/left
+
+Fonction de transition:  
+https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+
+Panneau d'actualités caché par défaut avec le left negatif 
+ALLER PLUS LOIN EN DEFINISSANT LE DESIGN RESPONSIVE DU PANNEAU ! */
+
+.actualites-panel {
+  position: fixed; /*https://developer.mozilla.org/en-US/docs/Web/CSS/left*/
+  top: 0;
+  left: -100%; /* Caché hors écran à gauche, position modifié par hover */
+  width: 40%; /* 1/3 de l’écran */
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.696); 
+  color: white;
+  padding: 20px;
+  transition: left 0.4s ease-in-out; /*Transitions CSS pour un effet fluide */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Par défaut, le panneau (.actualites-panel) est caché: left: -100% dans sa position initiale
+Quand la souris survole uniquement #ic-actu, alors le panneau apparaît:
+https://css-tricks.com/
+*/
+
+#ic-actu:hover + .actualites-panel,
+.actualites-panel:hover {   /*Le panneau reste affiché tant que la souris est dessus*/
+  left: 0; /* Le panneau devient visible, décalage 0 pour le rndre visible*/
+}
+
+
+/* classe de dimensionnement des logo actu */
+.logoActu {
+  width: 95px;  /* Ajuste la taille */
+  height: 95px; /* Ajuste la taille */
+  border-radius: 30%; /* Rend l'image circulaire */
+  object-fit: cover; /* Coupe l'image pour bien remplir le format */
+}
+
+.actu > * {    /* permet d'appliquer un margin à tous les enfants de la classe actu pour la mise en page */
+  margin-bottom: 20px;
+}
+
+/*ACCORDEON BOOTSTRAP modif */
+.accordion-button {
+  background-color: #EDB567 !important;
+  color: #000000 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #a4c3b2 !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+/*CAROUSEL BOOTSTRAP modif */
+.carousel-item {
+  padding: 30px; /* Espace autour de l'image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  
+}
+
+.carousel-img {
+  max-height: 400px;     /* Taille maximale contrôlée */
+  width: auto;           /* Garde la proportion */
+  border-radius: 10px;   
+  object-fit: contain;   /* Garde l'image entière visible sans déformation */
+}
+
+/*MODAL BOOTSTRAP modif 
+modal-sm (petit)
+
+modal-md (moyen)
+
+modal-lg (grand)
+
+modal-xl (extra large) */
+
+.modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  
+}
+
+
+
+
