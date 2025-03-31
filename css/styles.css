@@ -114,7 +114,7 @@ body::before {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* effet parallax */
-  filter: blur(0px);
+  filter: blur(3px);
   z-index: -1; /* passe derrière tout le reste */
   pointer-events: none; /* pour ne pas bloquer les clics */
   
